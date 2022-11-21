@@ -25,3 +25,8 @@ select
   *
 from e_commerce.customers 
 where state = 'Acre' or state = 'São Paulo' and street is not null;
+
+select distinct
+  *
+from e_commerce.orders 
+where status in ('entrega_pendente', 'cancelado');
