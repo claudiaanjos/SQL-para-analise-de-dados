@@ -38,3 +38,42 @@ select
   first_name
 from e_commerce.customers
 where first_name like '%m%' or first_name like 'M%';
+
+# In
+select
+  *
+from e_commerce.customers
+where state in ('Alagoas', 'Piauí');
+
+select
+  *
+from e_commerce.products
+where price in (10, 15, 75);
+
+# Is null
+select
+  *
+from e_commerce.customers
+where email is null;
+
+# Is not null
+select
+  *
+from e_commerce.customers
+where email is not null;
+
+# Apelidos
+select
+  1 + 2 as soma;
+
+# tabela temporária, não altera no banco
+select
+  id,
+  name as nome_da_categoria
+from e_commerce.categories; 
+
+select
+  tabela.id,
+  tabela.order_id,
+  tabela.product_id
+from e_commerce.items as tabela;
