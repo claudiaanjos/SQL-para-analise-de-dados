@@ -32,3 +32,52 @@ select distinct
   end as regiao
 from e_commerce.customers 
 where state is not null;
+
+# If
+select
+  id,
+  name,
+  if (name = 'Moda e Acessórios','Sim, é moda e acessórios', null) as if1
+from e_commerce.categories;
+
+select
+  id,
+  name,
+  if (name = 'Moda e Acessórios','Sim, é moda e acessórios', 'Não encontrado') as if2
+from e_commerce.categories;
+
+select
+  id,
+  name,
+  if (name = 'Moda e Acessórios','Sim, é moda e acessórios', 
+    if (name = 'Livros', 'Sim, é Livro', 'Não encontrado')) as if3
+from e_commerce.categories;
+
+select
+  id,
+  name,
+  if (id between 0 and 5, 'Entre 0 e 5', 'Maior que 5') as if4,
+  if (name = 'Moda e Acessórios','Sim, é moda e acessórios', 
+    if (name = 'Livros', 'Sim, é Livro', 'Não encontrado')) as if5
+from e_commerce.categories;
+
+# Coalesce busca a primeira expressão não nula
+select 
+  id,
+  first_name,
+  email,
+  state,
+  coalesce(state, 'Opa, estado nulo') as state_modificado,
+from e_commerce.customers;
+
+# Exemplo de associação com Coalesce
+select 
+  id,
+  first_name,
+  email,
+  state,
+  number,
+  additionals,
+  coalesce(cast(number as string), additionals) as primeiro_nulo,
+  coalesce(cast(number as string), additionals, 'Não encontrado') as primeiro_nulo_2
+from e_commerce.customers;
