@@ -29,3 +29,13 @@ from e_commerce.products;
 
 #mod - resto da divisão de um número pelo outro
 select mod(10,2), mod(5,2), mod(10,4);
+
+select *,
+  case
+    when mod(id,2) = 0 then 'par'
+    when mod(id,2) != 0 then 'impar'
+  end as  paridade
+from e_commerce.categories;
+
+#sin (seno - valores em radiano) pi = 3.1416
+select sin(0), sin(3.1416/6), sin(3.1416/2);
