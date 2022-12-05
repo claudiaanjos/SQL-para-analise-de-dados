@@ -39,3 +39,76 @@ from e_commerce.categories;
 
 #sin (seno - valores em radiano) pi = 3.1416
 select sin(0), sin(3.1416/6), sin(3.1416/2);
+
+#concat - concatena uma ou mais string
+select 'Hello', 'World', concat('Hello', ' ', 'World') as frase;
+
+select 
+  concat(first_name, ' ', last_name) as sobrenome
+from e_commerce.customers;
+
+select
+  id, 
+  concat('Quantidade de itens: ', quantity, ' - ', 'Preço total: ', total_price) as info
+from e_commerce.items;
+
+#starts_with - verifica se a string começa com a segunda entrada (onde vamos procurar, qual o valor)
+select starts_with('Homem Aranha', 'H'), starts_with('Homem Aranha', 'h'), starts_with('Homem Aranha', 'Homem');
+
+select 
+  id,
+  first_name
+from e_commerce.customers
+where starts_with(first_name, 'Ma') is true;
+
+select 
+  id,
+  first_name
+from e_commerce.customers
+where starts_with(first_name, 'Ma') is false;
+
+#lower
+select count(*)
+from e_commerce.exemplo_estados
+where lower(estado) = 'são paulo';
+
+select lower(name) as nome_minusculo
+from e_commerce.categories;
+
+#upper
+select count(*)
+from e_commerce.exemplo_estados
+where upper(estado) = 'SÃO PAULO';
+
+#split - separa a string em uma ou mais string, baseando-se em um delimitador
+select split('Você já está fera em SQL', ' ') as palavras;
+
+select split('Você já está fera em SQL', ' ')[ordinal(1)] as parte_1,
+  split('Você já está fera em SQL', ' ')[ordinal(2)] as parte_2,
+  split('Você já está fera em SQL', ' ')[ordinal(3)] as parte_3;
+
+select distinct
+  split(email, '@')[ordinal(2)]
+from e_commerce.customers;
+
+#trim - remove os caracteres iniciais e finais da string correspondentes às segundas entradas
+select trim('CPF: 123.456.78-9', 'CPF: '), trim('***(11) 9123456-7896***', '*'), trim(' Sao Paulo   ');
+
+#replace
+select 
+  'Olá! Tudo bem?',
+  replace('Olá! Tudo bem?', 'Olá', 'Oi') as frase;
+
+select *,
+  replace(name, ' e ', ' & ') as nome_diferente
+from e_commerce.categories;
+
+#char_length - retorna o comprimento da string
+select distinct
+  status,
+  char_length(status)
+from `e_commerce.orders`;
+
+select count(id) as quantidade_cancelados
+from `e_commerce.orders`
+where char_length(status) = 9;
