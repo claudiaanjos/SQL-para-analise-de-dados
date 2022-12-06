@@ -112,3 +112,70 @@ from `e_commerce.orders`;
 select count(id) as quantidade_cancelados
 from `e_commerce.orders`
 where char_length(status) = 9;
+
+# date
+select
+  date(2020, 06, 12) as data,
+  current_timestamp,
+  date(current_timestamp),
+  date(current_timestamp, "America/Sao_Paulo"),
+  date(current_datetime) as datetime_;
+
+select 
+  id,
+  created_at,
+  date(created_at) as data
+from e_commerce.customers;
+
+select
+  count(distinct id) as num_pedidos,
+  date(created_at) as dia
+from e_commerce.orders 
+group by dia
+order by dia;
+
+select
+  count(distinct id) as num_pedidos,
+  created_at as dia
+from e_commerce.orders 
+group by dia
+order by dia;
+
+# datetime
+select
+  datetime(2020,06,12,21,05,03) as date_and_time,
+  current_timestamp as coluna2,
+  datetime(current_timestamp) as coluna3,
+  datetime(current_timestamp, "America/Sao_Paulo") as coluna4,
+  datetime(current_date);
+  
+select 
+  id,
+  created_at,
+  datetime(created_at) as date_and_time,
+  datetime(created_at, "America/Sao_Paulo") as date_and_time_2
+from e_commerce.customers;
+
+# timestamp
+select
+  timestamp("2008-12-25 15:30:00") as exemplo_1,
+  timestamp("2008-12-25 15:30:00 America/Sao_Paulo") as exemplo_2,
+  timestamp("2008-12-25 15:30:00", "America/Sao_Paulo") as exemplo_3,
+  timestamp(current_datetime) as exemplo_4,
+  timestamp(current_date) as exemplo_5,
+  current_timestamp,
+  timestamp(current_datetime("America/Sao_Paulo")) as exemplo_6,
+  timestamp(current_date("America/Sao_Paulo")) as exemplo_7;
+
+# current_date, current_datetime, current_timestamp
+select
+  current_date as exemplo1,
+  current_date() as exemplo2,
+  current_date("America/Sao_Paulo") as exemplo3,
+  current_date("Asia/Tokyo") as exemplo4,
+  current_datetime as exemplo5,
+  current_datetime() as exemplo6,
+  current_datetime("Asia/Tokyo") as exemplo7,
+  current_datetime("America/Sao_Paulo") as exemplo8,
+  current_timestamp as exemplo9,
+  current_timestamp() as exemplo10;
