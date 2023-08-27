@@ -4,8 +4,8 @@
 
 Neste curso da [Udemy](https://www.udemy.com/course/curso-completo-sql-para-analise-de-dados/) os alunos aprenderão:
 
-- Entender quais são os principais subconjuntos e dialetos de SQL
-- Aprender a estrutura de um Banco de Dados Relacional, chaves primárias e estrangeiras
+- Entender quais são os principais subconjuntos e dialetos de SQL;
+- Aprender a estrutura de um Banco de Dados Relacional, chaves primárias e estrangeiras;
 - Entender as diferenças entre Banco de Dados Relacional (SQL) e Não Relacional (No-SQL)
 - Aprender, NA PRÁTICA, os principais Comandos e Operadores da Linguagem de Consulta de Dados
 - Aprender todos os tipos de JOINS, com exemplos de cada caso
