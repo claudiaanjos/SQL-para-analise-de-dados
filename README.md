@@ -12,8 +12,8 @@ Neste curso da [Udemy](https://www.udemy.com/course/curso-completo-sql-para-anal
 - Aprender Sub Consultas e Funções de Janela em detalhes (Window Functions);
 - Aprender DQL (um subconjunto de SQL) do básico ao avançado;
 - Aprender a realizar consultas em Banco de Dados Relacional;
-- Aprender como é estruturada uma consulta
-- Aprender Funções Matemáticas, Geográficas, de Agregação, de Strings, de Data e muito mais!
+- Aprender como é estruturada uma consulta;
+- Aprender Funções Matemáticas, Geográficas, de Agregação, de Strings, de Data e outras;
 - Criar conta no BigQuery e realizar consultas nos bancos de dados com SQL, do BÁSICO AO AVANÇADO!
 
 
