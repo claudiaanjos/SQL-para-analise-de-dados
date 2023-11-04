@@ -2,7 +2,7 @@
 
 ### 📚  Descrição
 
-Neste curso da [Udemy](https://www.udemy.com/course/curso-completo-sql-para-analise-de-dados/) os alunos aprenderão:
+No curso da [Udemy](https://www.udemy.com/course/curso-completo-sql-para-analise-de-dados/) tivemos os seguintes tópicos:
 
 - Entender quais são os principais subconjuntos e dialetos de SQL;
 - Aprender a estrutura de um Banco de Dados Relacional, chaves primárias e estrangeiras;
